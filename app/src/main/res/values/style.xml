@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/material_dynamic_primary0</item>
-        <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
-        <item name="colorAccent">@color/design_default_color_primary_variant</item>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#3701B1</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">#000000</item>
     </style>
     <style name="navigationTheme">
-        <item name="colorPrimary">@color/material_dynamic_primary0</item>
-        <item name="colorControlHighlight">@color/design_default_color_primary_variant</item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorControlHighlight">#3B00C1</item>
     </style>
 </resources>

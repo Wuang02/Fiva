@@ -47,18 +47,17 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:navigationIcon="@drawable/menu_fill0_wght400_grad0_opsz48" >
 
-                <Button
-                    android:layout_width="50dp"
+                <ImageView
                     android:id="@+id/login_signup"
+                    android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="right"
                     android:layout_margin="5dp"
                     android:background="@drawable/user"
+                    android:onClick="callRetailerScreen"
                     tools:layout_editor_absoluteX="72dp"
-                    tools:layout_editor_absoluteY="4dp"
-                    android:onClick="callRetailerScreen"></Button>
+                    tools:layout_editor_absoluteY="4dp"/>
             </androidx.appcompat.widget.Toolbar>
-
 
 
             <TextView

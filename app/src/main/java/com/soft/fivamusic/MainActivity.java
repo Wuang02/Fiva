@@ -121,6 +121,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void callRetailerScreen(View view){
-        startActivity(new Intent(getApplicationContext(),RetailerStartupScreen.class));
+        startActivity(new Intent(getApplicationContext(), RetailerStartupScreen.class));
     }
 }

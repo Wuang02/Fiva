@@ -36,20 +36,23 @@
                 android:layout_marginTop="10dp">
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/login_btn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/login"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="#64FFDA"
-                    android:layout_marginRight="10dp"/>
+                    android:text="@string/login"
+                    android:onClick="callLoginScreen"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/signup_btn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/signup"
+                    android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:background="#64FFDA"
-                    android:layout_marginLeft="10dp"/>
+                    android:text="@string/signup" />
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
