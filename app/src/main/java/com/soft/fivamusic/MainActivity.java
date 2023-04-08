@@ -8,8 +8,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -55,7 +57,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()){
+            case R.id.nav_home:
+                break;
+            case R.id.nav_aboutus:
+                Intent intent = new Intent(MainActivity.this,About.class);
+                startActivity(intent);
+                break;
+
+            case R.id.nav_setting:
+                Toast.makeText(this, "Version 1.0.0 by Group 5", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
         return true;
     }
 }

@@ -17,7 +17,8 @@
         android:src="@drawable/audio_control"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/music__1_"></ImageView>
+        app:srcCompat="@drawable/music__1_"
+        tools:srcCompat="@drawable/music__1_"></ImageView>
 
     <TextView
         android:id="@+id/textView9"
