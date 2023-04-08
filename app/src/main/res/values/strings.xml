@@ -19,4 +19,13 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
+    <string name="retailer_heading">Begin new journey</string>
+    <string name="retailer_tag_line">Boom</string>
+    <string name="create_account">Create Account</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="login">Login</string>
+    <string name="about_us">About Us</string>
+    <string name="signup">Sign Up</string>
+    <string name="forget_password">Forget Password</string>
+
 </resources>

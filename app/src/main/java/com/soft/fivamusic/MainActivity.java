@@ -11,8 +11,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
+import com.soft.fivamusic.common.loginsignup.RetailerStartupScreen;
 import com.soft.fivamusic.homepageactivity.Setting;
 import com.soft.fivamusic.menu.About;
 
@@ -22,17 +29,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    Animation topAnim, bottomAnim;
+    TextView logo, slogan;
+    ImageView image;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //fullscreen background
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
+        //Animations
+        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
+        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
         //Hooks
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        image = findViewById(R.id.imageView);
+        logo = findViewById(R.id.textView);
+        slogan = findViewById(R.id.textView2);
+
+        image.setAnimation(topAnim);
+        logo.setAnimation(bottomAnim);
+        slogan.setAnimation(bottomAnim);
 
         //Tool bar
         setSupportActionBar(toolbar);
@@ -83,10 +106,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent1);
                 break;
             case R.id.nav_playlist:
+            case R.id.playlist1:
                 Intent intent2 = new Intent(MainActivity.this, Playlist.class);
                 startActivity(intent2);
                 break;
-/*---------------------------------test---------------------------------*/
+            /*---------------------------------test---------------------------------*/
 //            case R.id.nav_setting:
 //                Toast.makeText(this, "Version 1.0.0 by Group 5", Toast.LENGTH_SHORT).show();
 //                break;
@@ -94,5 +118,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    public void callRetailerScreen(View view){
+        startActivity(new Intent(getApplicationContext(),RetailerStartupScreen.class));
     }
 }

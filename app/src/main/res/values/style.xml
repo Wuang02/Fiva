@@ -8,4 +8,8 @@
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">#000000</item>
     </style>
+    <style name="navigationTheme">
+        <item name="colorPrimary">@color/material_dynamic_primary0</item>
+        <item name="colorControlHighlight">@color/design_default_color_primary_variant</item>
+    </style>
 </resources>
