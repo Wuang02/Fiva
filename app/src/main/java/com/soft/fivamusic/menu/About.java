@@ -1,8 +1,10 @@
-package com.soft.fivamusic;
+package com.soft.fivamusic.menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.soft.fivamusic.R;
 
 public class About extends AppCompatActivity {
 

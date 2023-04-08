@@ -91,6 +91,7 @@
                 app:cardBackgroundColor="#BA68C8">
 
                 <RelativeLayout
+                    android:id="@+id/playlist1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -121,6 +122,7 @@
                 app:cardBackgroundColor="#6A1B9A">
 
                 <RelativeLayout
+                    android:id="@+id/playlist2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -163,6 +165,7 @@
                 app:cardBackgroundColor="#7834CA">
 
                 <RelativeLayout
+                    android:id="@+id/nav_artist"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -194,6 +197,7 @@
                 app:cardBackgroundColor="#EA80FC">
 
                 <RelativeLayout
+                    android:id="@+id/nav_topsong"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -236,6 +240,7 @@
                 app:cardBackgroundColor="#D500F9">
 
                 <RelativeLayout
+                    android:id="@+id/nav_liked"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -267,6 +272,7 @@
                 app:cardBackgroundColor="#AA00FF">
 
                 <RelativeLayout
+                    android:id="@+id/nav_genres"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 

@@ -1,7 +1,6 @@
 package com.soft.fivamusic;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -12,9 +11,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.soft.fivamusic.homepageactivity.Setting;
+import com.soft.fivamusic.menu.About;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -75,8 +75,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home:
                 break;
             case R.id.nav_aboutus:
-                Intent intent = new Intent(MainActivity.this,About.class);
+                Intent intent = new Intent(MainActivity.this, About.class);
                 startActivity(intent);
+                break;
+            case R.id.nav_setting:
+                Intent intent1 = new Intent(MainActivity.this, Setting.class);
+                startActivity(intent1);
+                break;
+            case R.id.nav_playlist:
+                Intent intent2 = new Intent(MainActivity.this, Playlist.class);
+                startActivity(intent2);
                 break;
 /*---------------------------------test---------------------------------*/
 //            case R.id.nav_setting:
