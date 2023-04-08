@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -36,6 +37,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //Tool bar
         setSupportActionBar(toolbar);
 
+        //Hidden Item
+        Menu menu = navigationView.getMenu();
+        menu.findItem(R.id.nav_logout).setVisible(false);
+        menu.findItem(R.id.nav_profile).setVisible(false);
+
+
         //Navigation drawer menu
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
@@ -44,8 +51,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
+
+        //Home page default when click back
+        navigationView.setCheckedItem(R.id.nav_home);
     }
 
+
+    //Click back to page
     @Override
     public void onBackPressed() {
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
@@ -56,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    //Switch page
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
@@ -65,11 +78,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent intent = new Intent(MainActivity.this,About.class);
                 startActivity(intent);
                 break;
-
-            case R.id.nav_setting:
-                Toast.makeText(this, "Version 1.0.0 by Group 5", Toast.LENGTH_SHORT).show();
-                break;
+/*---------------------------------test---------------------------------*/
+//            case R.id.nav_setting:
+//                Toast.makeText(this, "Version 1.0.0 by Group 5", Toast.LENGTH_SHORT).show();
+//                break;
         }
+        drawerLayout.closeDrawer(GravityCompat.START);
 
         return true;
     }
